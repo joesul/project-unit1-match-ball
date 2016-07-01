@@ -6,26 +6,35 @@
     <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
     <title>Match Ball</title>
     <div class="container">
+      <div id="gamename">Match Ball</div>
+      <div id="player1tag">Player 1 [Press "A" to start, "S" to stop]</div>
+      <div id="player2tag"><br>Player 2 [Press "K" to start, "L" to stop]</div>
 <!-- player one area -->
       <div id="player1">
         <div id="p1lane">
           <div id="p1ball"></div>
-          <div id="p1target">
-          </div>
-
+          <div id="p1target"></div>
         </div>
-
+      </div>
+<!-- results -->
+      <div id="p1winbox"  class="hide">
+        <p id="p1winner">Player 1 Wins!</p>
+      </div>
+      <div id="tlbox" class="hide">
+        <p id="tielose">BOTH LOSE</p>
+      </div>
+      <div id="p2winbox"  class="hide">
+        <p id="p2winner">Player 2 Wins!</p>
       </div>
 <!-- player two area -->
       <div id="player2">
         <div id="p2lane">
           <div id="p2ball"></div>
-          <div id="p2target">
-          </div>
-
+          <div id="p2target"></div>
         </div>
       </div>
-
+<!-- rematch button -->
+      <button>REMATCH!</button>
     </div>
   </head>
   <body>

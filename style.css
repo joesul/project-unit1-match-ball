@@ -6,9 +6,53 @@
   border-radius: 100px;
 }
 
+#gamename {
+  position: absolute;
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  left: 490px;
+  top: 27px;
+	width: 250px;
+	height: 60px;
+	background: linear-gradient(to bottom, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%);
+  border: 5px groove black;
+  border-radius: 30px;
+  }
+
+#player1tag {
+  position: absolute;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  left: 49px;
+  top: 75px;
+	width: 400px;
+	height: 55px;
+	background: rgba(247,207,247,1);
+  border: 5px groove black;
+  border-bottom: none;
+  border-radius: 30px;
+  }
+
+#player2tag {
+  position: absolute;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  left: 49px;
+  top: 500px;
+	width: 400px;
+	height: 53px;
+	background: rgba(185,234,136,1);
+  border: 5px groove black;
+  border-top: none;
+  border-radius: 30px;
+  }
+
 #p1lane {
   position: absolute;
-  top: 100px;
+  top: 124px;
   height: 100px;
   width: 1194px;
   background: linear-gradient(to bottom, rgba(247,207,247,1) 0%,rgba(229,115,231,1) 24%,rgba(211,10,214,1) 50%,rgba(223,83,225,1) 79%,rgba(232,136,234,1) 100%);
@@ -20,8 +64,19 @@
   top: 10px;
 	width: 80px;
 	height: 80px;
-	background: radial-gradient(ellipse at center, rgba(255,202,201,1) 0%,rgba(255,48,37,1) 100%);;
+	background: radial-gradient(ellipse at center, rgba(255,202,201,1) 0%,rgba(255,48,37,1) 100%);
+  border: 2px outset rgba(255,48,37,1);
   border-radius: 40px;
+}
+
+#p1target {
+  position: absolute;
+  width: 80px;
+  height: 100px;
+  left: 557px;
+  background: linear-gradient(to right, rgba(255,183,147,1) 0%,rgba(156,52,0,1) 38%,rgba(156,52,0,1) 38%,rgba(118,39,0,1) 56%,rgba(118,39,0,1) 56%,rgba(118,39,0,1) 57%,rgba(255,95,15,1) 100%);
+  border-left: 5px groove rgba(255,183,147,1);
+  border-right: 5px groove rgba(255,95,15,1);
 }
 
 #p2lane {
@@ -38,8 +93,19 @@
   top: 10px;
 	width: 80px;
 	height: 80px;
-	background: radial-gradient(ellipse at center, rgba(255,202,201,1) 0%,rgba(255,48,37,1) 100%);;
+	background: radial-gradient(ellipse at center, rgba(255,202,201,1) 0%,rgba(255,48,37,1) 100%);
+  border: 2px outset rgba(255,48,37,1);
   border-radius: 40px;
+}
+
+#p2target {
+  position: absolute;
+  width: 80px;
+  height: 100px;
+  left: 557px;
+  background: linear-gradient(to right, rgba(255,183,147,1) 0%,rgba(156,52,0,1) 38%,rgba(156,52,0,1) 38%,rgba(118,39,0,1) 56%,rgba(118,39,0,1) 56%,rgba(118,39,0,1) 57%,rgba(255,95,15,1) 100%);
+  border-left: 5px groove rgba(255,183,147,1);
+  border-right: 5px groove rgba(255,95,15,1);
 }
 
 .speed-one {
@@ -57,6 +123,13 @@
   animation-direction: alternate;
 }
 
+.running {
+  animation-play-state: running;
+}
+.pause {
+  animation-play-state: paused;
+}
+
 @keyframes move {
   0% {
     transform: translate3d(0, 0, 0);
@@ -64,4 +137,89 @@
   100% {
     transform: translate3d(1110px, 0, 0);
   }
+}
+
+#p1winbox {
+  position: absolute;
+  left: 125px;
+  top: 240px;
+	width: 350px;
+	height: 125px;
+	background: linear-gradient(to bottom, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%);
+  border: 10px groove black;
+  border-radius: 30px;
+}
+
+#p1winner {
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#tlbox {
+  position: absolute;
+  top: 240px;
+  left: 550px;
+	width: 125px;
+	height: 125px;
+  background: linear-gradient(to bottom, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%);
+  border: 10px groove black;
+  border-radius: 40px;
+}
+
+#tielose {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#p2winbox {
+  position: absolute;
+  left: 750px;
+  top: 240px;
+	width: 350px;
+	height: 125px;
+	background: linear-gradient(to bottom, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%);
+  border: 10px groove black;
+  border-radius: 30px;
+}
+
+#p2winner {
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
+.pop {
+  animation: pop 1s;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+button {
+  position: absolute;
+  left: 850px;
+  top: 520px;
+  height: 80px;
+  width: 150px;
+  font-size: 20px;
+  color: white;
+	background: grey;
+  border: 5px groove white;
+  border-radius: 30px;
 }
